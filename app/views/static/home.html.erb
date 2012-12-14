@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+	<h1>You're signed in!</h1>
+	<div class="hero-unit" style="overflow: auto;">
+  <div class="thumbnail span3" style="margin-right: 20px;">
+    <img src="http://placehold.it/260x180" alt="Sample Image">
+  </div>
+  <h1>Juan Carlos Pulido</h1>
+  <p>This paragraph contains important ... </p>
+  <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+	
+<% else %>
+<div class="center hero-unit">
+    <h1>Welcome to One Month Rails</h1>
+
+    <h2>
+      You've found the home page for the
+      <a href="http://omrails.com/">One Month Rails</a>
+      first application.
+    </h2>
+
+    <%= link_to "Sign up now!", new_user_registration_path, 
+                                class: "btn btn-large btn-primary" %>
+</div>
+<% end %>
